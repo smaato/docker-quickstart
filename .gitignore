@@ -55,3 +55,6 @@ docs/_build/
 
 # Vagrant temp folder
 .vagrant
+
+# DB related
+db.sqlite3
