@@ -114,6 +114,6 @@ run_devel_ssh() {
         -d \
         -p 22222:22 \
         -p 8000:8000 \
-        -h app.devel \
+        -h $NAME \
         $REGISTRY/$NAME:$VER_DEVEL_SSH
 }

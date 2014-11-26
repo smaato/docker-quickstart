@@ -1,5 +1,7 @@
 #!/bin/bash
-source containers.sh
+CONFDIR='/app/config'
+
+source $CONFDIR/containers.sh
 
 run_mysqlhost
 
