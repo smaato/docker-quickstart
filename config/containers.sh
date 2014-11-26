@@ -117,3 +117,14 @@ run_devel_ssh() {
         -h $NAME \
         $REGISTRY/$NAME:$VER_DEVEL_SSH
 }
+
+stop_remove() {
+    # @param $1: name of container to stop and remove
+    if [ `sudo docker ps | grep $1 | wc -l` -ne 0 ]; then
+        sudo docker stop $1
+    fi
+    if [ `sudo docker ps -a | grep $1 | wc -l` -ne 0 ]; then
+        sudo docker rm $1
+    fi
+    sleep 2
+}

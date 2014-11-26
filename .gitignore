@@ -58,3 +58,6 @@ docs/_build/
 
 # DB related
 db.sqlite3
+
+# Collected static files
+collected/

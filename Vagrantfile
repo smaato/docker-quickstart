@@ -19,7 +19,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.provision "docker"
 
   config.vm.provision "shell",
-    :path => "config/build.sh",
+    :path => "config/startup.sh",
     run: "always"
 
 end
