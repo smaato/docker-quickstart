@@ -7,8 +7,8 @@ ENTRYPOINT if [ ! -f $VENVDIR/bin/activate ]; then virtualenv $VENVDIR; fi && \
     . $VENVDIR/bin/activate && \
     pip install -r /app/requirements/dev.txt && \
     python /app/backend/manage.py collectstatic --noinput && \
-	mysql -u root -proot -h mysqlhost -Bse "CREATE DATABASE IF NOT EXISTS backend;" && \
-	python /app/backend/manage.py migrate && \
+    mysql -u root -proot -h mysqlhost -Bse "CREATE DATABASE IF NOT EXISTS backend;" && \
+    python /app/backend/manage.py migrate && \
     ln -s /app/config/uwsgi-devel/backend.ini /etc/uwsgi/ && \
     uwsgi --emperor /etc/uwsgi/
 
