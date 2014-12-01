@@ -41,27 +41,27 @@ build_devel_backend() {
     NAME=devel-backend
     VERSION=$VER_DEVEL_BACKEND
 
-    sed -i 's/:SOAPBASEVER/:'"$VER_BASE"'/g' $CONFDIR/docker-$NAME/Dockerfile
+    sed -i 's/:VER_BASE/:'"$VER_BASE"'/g' $CONFDIR/docker-$NAME/Dockerfile
     build $NAME $VERSION
-    sed -i 's/:'"$VER_BASE"'/:SOAPBASEVER/g' $CONFDIR/docker-$NAME/Dockerfile
+    sed -i 's/:'"$VER_BASE"'/:VER_BASE/g' $CONFDIR/docker-$NAME/Dockerfile
 }
 
 build_devel_webserver() {
     NAME=devel-webserver
     VERSION=$VER_DEVEL_WEBSERVER
 
-    sed -i 's/:SOAPBASEVER/:'"$VER_BASE"'/g' $CONFDIR/docker-$NAME/Dockerfile
+    sed -i 's/:VER_BASE/:'"$VER_BASE"'/g' $CONFDIR/docker-$NAME/Dockerfile
     build $NAME $VERSION
-    sed -i 's/:'"$VER_BASE"'/:SOAPBASEVER/g' $CONFDIR/docker-$NAME/Dockerfile
+    sed -i 's/:'"$VER_BASE"'/:VER_BASE/g' $CONFDIR/docker-$NAME/Dockerfile
 }
 
 build_devel_ssh() {
     NAME=devel-ssh
     VERSION=$VER_DEVEL_SSH
 
-    sed -i 's/:SOAPBASEVER/:'"$VER_BASE"'/g' $CONFDIR/docker-$NAME/Dockerfile
+    sed -i 's/:VER_BASE/:'"$VER_BASE"'/g' $CONFDIR/docker-$NAME/Dockerfile
     build $NAME $VERSION
-    sed -i 's/:'"$VER_BASE"'/:SOAPBASEVER/g' $CONFDIR/docker-$NAME/Dockerfile
+    sed -i 's/:'"$VER_BASE"'/:VER_BASE/g' $CONFDIR/docker-$NAME/Dockerfile
 }
 
 #--------------------------------------------------------------------------------#

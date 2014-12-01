@@ -1,4 +1,4 @@
-FROM docker_quickstart/base:SOAPBASEVER
+FROM docker_quickstart/base:VER_BASE
 MAINTAINER Sumit Datta <sumitdatta@gmail.com>
 
 ENV VENVDIR /venv

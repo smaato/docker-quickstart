@@ -1,4 +1,4 @@
-FROM docker_quickstart/base:SOAPBASEVER
+FROM docker_quickstart/base:VER_BASE
 MAINTAINER Smaato
 
 ENTRYPOINT cp /app/config/nginx-devel/nginx.conf /etc/nginx/nginx.conf && \
