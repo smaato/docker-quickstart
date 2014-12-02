@@ -1,7 +1,7 @@
 #!/bin/bash
 CONFDIR='/app/config'
 APPDIR=`dirname $CONFDIR`
-REGISTRY="docker_quickstart"
+REGISTRY="brainless"
 
 VER_BASE="0.1"
 VER_DEVEL_BACKEND="0.1"
